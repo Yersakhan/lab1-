@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Менің коммит жобам</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <h1>Әр өзгеріс — бір коммит</h1>
+        <p class="lead">Git тарихы осылай құралады: файл қосамыз, түсінікті хабарлама жазамыз, нәтижесін сақтаймыз.</p>
+        <a class="btn" href="#komandalar">Командаларды көру</a>
+      </div>
+      <ol class="graph" aria-label="Коммит тарихы">
+        <li><span class="node"></span><div><span class="tag">HEAD</span><strong>Updated index.html with thank you message</strong><small>--amend арқылы түзетілген соңғы коммит</small></div></li>
+        <li><span class="node"></span><div><strong>Add basic index.html file</strong><small>Басты бет қосылды</small></div></li>
+        <li><span class="node"></span><div><strong>Initial commit with README</strong><small>Жоба басталды</small></div></li>
+      </ol>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap" id="komandalar">
+      <h2>Негізгі командалар</h2>
+      <dl class="cmds">
+        <div><dt><code>git add &lt;файл&gt;</code></dt><dd>Файлды индекске қосады, яғни келесі коммитке дайындайды.</dd></div>
+        <div><dt><code>git commit -m "хабарлама"</code></dt><dd>Индекстегі өзгерістерді коммит ретінде сақтайды.</dd></div>
+        <div><dt><code>git commit --amend</code></dt><dd>Соңғы коммитті өзгертеді: жаңа файл не жаңа хабарлама қосуға болады.</dd></div>
+        <div><dt><code>git log --oneline</code></dt><dd>Коммит тарихын қысқаша, бір жолмен көрсетеді.</dd></div>
+        <div><dt><code>git show &lt;hash&gt;</code></dt><dd>Нақты коммитте не өзгергенін көрсетеді.</dd></div>
+        <div><dt><code>git reset HEAD^</code></dt><dd>Соңғы коммитті болдырмайды, бірақ файлдарды қалдырады.</dd></div>
+        <div><dt><code>git checkout HEAD^ &lt;файл&gt;</code></dt><dd>Файлды алдыңғы коммиттегі күйінде қайтарады.</dd></div>
+      </dl>
+    </section>
+    <section class="wrap">
+      <div class="thanks">
+        <p>Қонақ болғаныңыз үшін рахмет!</p>
+        <small>Бұл жол --amend арқылы соңғы коммитке қосылды.</small>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Git коммиттерімен жұмыс — зертханалық жұмыс</div>
+  </footer>
+</body>
+</html>
